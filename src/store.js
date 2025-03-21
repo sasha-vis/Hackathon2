@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { thunk } from 'redux-thunk';
-import { membersReducer, favoritesReducer } from './reducer';
+import { membersReducer, favoritesReducer } from './reducers';
 
 const reducer = combineReducers({
 	members: membersReducer,
