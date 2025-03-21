@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Header, Footer } from './components';
+import { Header } from './components';
 import { MainPage, MemberPage, FavoritesPage, NotFoundPage } from './pages';
 import styles from './App.module.css';
 
@@ -13,7 +13,6 @@ export const App = () => {
 				<Route path="/favorites" element={<FavoritesPage></FavoritesPage>} />
 				<Route path="*" element={<NotFoundPage></NotFoundPage>} />
 			</Routes>
-			<Footer />
 		</div>
 	);
 };
