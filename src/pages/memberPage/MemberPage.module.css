@@ -1,36 +1,36 @@
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  min-height: 100vh;
-  background-color: #f9fafb;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+	min-height: 100vh;
+	background-color: #f9fafb;
 }
 
 @media (max-width: 640px) {
-  .container {
-    padding: 1rem;
-  }
+	.container {
+		padding: 1rem;
+	}
 }
 
 .socialIcon {
-  font-size: 1.75rem;
-  color: #6b7280;
-  transition: color 0.2s ease;
+	font-size: 1.75rem;
+	color: #6b7280;
+	transition: color 0.2s ease;
 }
 
 .socialIcon:hover {
-  transform: translateY(-2px);
+	transform: translateY(-2px);
 }
 
 /* Специфичные цвета для каждой соц сети при наведении */
-.socialIcon[title="GitHub"]:hover {
-  color: #333;
+.socialIcon[title='GitHub']:hover {
+	color: #333;
 }
 
-.socialIcon[title="VKontakte"]:hover {
-  color: #4C75A3;
+.socialIcon[title='VKontakte']:hover {
+	color: #4c75a3;
 }
 
-.socialIcon[title="Telegram"]:hover {
-  color: #0088cc;
+.socialIcon[title='Telegram']:hover {
+	color: #0088cc;
 }
