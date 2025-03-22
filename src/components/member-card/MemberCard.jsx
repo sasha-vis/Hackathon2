@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToFavorites, removeFromFavorites } from '../../actions';
 import { selectFavorites } from '../../selectors';
-import styles from './member-card.module.css';
 import { FavoriteButton } from '../favorite-button/FavotireButton';
+import PropTypes from 'prop-types';
+import styles from './member-card.module.css';
+import { Badge } from '../badge/Badge ';
 
-export const MemberCard = ({ id, name, surname, avatar, about }) => {
+export const MemberCard = ({ id, name, surname, avatar, about, role }) => {
 	const favoritesMembers = useSelector(selectFavorites);
 	const dispatch = useDispatch();
 
@@ -20,6 +22,10 @@ export const MemberCard = ({ id, name, surname, avatar, about }) => {
 	const isfavorite = favoritesMembers.includes(id);
 	return (
 		<div className={styles.card}>
+			<Badge
+				color={role === 'Тимлид' ? 'purple' : '#3b82f6'}
+				role={role}
+			/>
 			<img
 				src={avatar}
 				alt={`${name} ${surname}`}
@@ -49,4 +55,13 @@ export const MemberCard = ({ id, name, surname, avatar, about }) => {
 			</div>
 		</div>
 	);
+};
+
+MemberCard.propTypes = {
+	id: PropTypes.string.isRequired,
+	name: PropTypes.string.isRequired,
+	surname: PropTypes.string.isRequired,
+	avatar: PropTypes.string.isRequired,
+	about: PropTypes.string.isRequired,
+	role: PropTypes.string.isRequired,
 };

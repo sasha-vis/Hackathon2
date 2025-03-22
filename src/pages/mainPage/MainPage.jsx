@@ -24,7 +24,7 @@ export const MainPage = () => {
 				</p>
 			</div>
 			<div className={styles.members}>
-				{members.map(({ id, name, surname, avatar, about }) => (
+				{members.map(({ id, name, surname, avatar, about, role }) => (
 					<MemberCard
 						key={id}
 						id={id}
@@ -32,6 +32,7 @@ export const MainPage = () => {
 						surname={surname}
 						avatar={avatar}
 						about={about}
+						role={role}
 					/>
 				))}
 			</div>
