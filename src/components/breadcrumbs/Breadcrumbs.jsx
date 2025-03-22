@@ -4,7 +4,7 @@ import styles from './breadcrumbs.module.css';
 
 export const Breadcrumbs = () => {
 	const location = useLocation();
-	console.log(location);
+	
 	const pathnames = location.pathname.split('/').filter((x) => x && isNaN(x));
 
 	return (
