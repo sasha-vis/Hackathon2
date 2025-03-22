@@ -1,0 +1,21 @@
+.breadcrumbs {
+	display: flex;
+	padding: 10px;
+	margin-left: 30px;
+	justify-content: start;
+	align-items: center;
+}
+
+.breadcrumbs ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+}
+
+.breadcrumbs span {
+	padding: 0 5px;
+}
+
+.last {
+	font-weight: bold;
+}

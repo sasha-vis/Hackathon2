@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Header } from './components';
+import { Breadcrumbs, Header } from './components';
 import { MainPage, MemberPage, FavoritesPage, NotFoundPage } from './pages';
 import styles from './App.module.css';
 
@@ -7,6 +7,7 @@ export const App = () => {
 	return (
 		<div className={styles.App}>
 			<Header />
+			<Breadcrumbs />
 			<Routes>
 				<Route
 					path="/"
