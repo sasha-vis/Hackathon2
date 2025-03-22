@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { WiDaySunny, WiCloudy, WiRain, WiSnow, WiThunderstorm } from 'react-icons/wi';
 import styles from './WeatherWidget.module.css';
+import { WEATHER_ICONS, getWeatherType, getTemperatureType } from './weatherUtils';
 
 // interface WeatherData {
 // 	temperature: number;
@@ -36,19 +36,15 @@ export const WeatherWidget = () => {
 	const [error, setError] = useState('');
 
 	const getWeatherIcon = (condition) => {
-		const conditionLower = condition.toLowerCase();
-		if (conditionLower.includes('солн')) {
-			return <WiDaySunny className={styles.weatherIcon} />;
-		} else if (conditionLower.includes('облачн')) {
-			return <WiCloudy className={styles.weatherIcon} />;
-		} else if (conditionLower.includes('дожд')) {
-			return <WiRain className={styles.weatherIcon} />;
-		} else if (conditionLower.includes('снег')) {
-			return <WiSnow className={styles.weatherIcon} />;
-		} else if (conditionLower.includes('гроз')) {
-			return <WiThunderstorm className={styles.weatherIcon} />;
-		}
-		return <WiDaySunny className={styles.weatherIcon} />;
+		const weatherType = getWeatherType(condition);
+		const IconComponent = WEATHER_ICONS[weatherType];
+		return <IconComponent className={styles.weatherIcon} />;
+	};
+
+	const getWeatherClass = (temperature, condition) => {
+		const temperatureType = getTemperatureType(temperature);
+		const weatherType = getWeatherType(condition);
+		return `${styles.weatherWidget} ${styles[temperatureType]} ${styles[weatherType]}`;
 	};
 
 	const fetchWeather = (city) => {
@@ -64,14 +60,13 @@ export const WeatherWidget = () => {
 				return response.json();
 			})
 			.then(({ name, main, weather, wind }) => {
-				const newWeather = {
+				setWeather({
 					temperature: Math.round(main.temp),
 					condition: weather[0].description,
 					humidity: main.humidity,
 					windSpeed: Math.round(wind.speed),
 					city: name,
-				};
-				setWeather(newWeather);
+				});
 				localStorage.setItem(STORAGE_KEY, name);
 				setIsModalOpen(false);
 				setNewCity('');
@@ -102,26 +97,27 @@ export const WeatherWidget = () => {
 	return (
 		<>
 			<div
-				className={styles.weatherWidget}
+				className={getWeatherClass(weather.temperature, weather.condition)}
 				onClick={() => setIsModalOpen(true)}
 				style={{ cursor: 'pointer' }}
 			>
-				<div className={styles.location}>
-					<h2>{weather.city}</h2>
-				</div>
-				<div className={styles.weatherInfo}>
-					<div className={styles.iconContainer}>
-						{getWeatherIcon(weather.condition)}
+				<div className={styles.weatherContent}>
+					<div className={styles.mainInfo}>
+						<div className={styles.iconContainer}>
+							{getWeatherIcon(weather.condition)}
+						</div>
+						<div className={styles.temperatureInfo}>
+							<div className={styles.temperature}>{weather.temperature}°C</div>
+							<div className={styles.city}>{weather.city}</div>
+						</div>
 					</div>
-					<div className={styles.temperature}>{weather.temperature}°C</div>
-					<div className={styles.condition}>{weather.condition}</div>
 					<div className={styles.details}>
 						<div className={styles.detail}>
-							<span>Влажность:</span>
+							<span>Влажность</span>
 							<span>{weather.humidity}%</span>
 						</div>
 						<div className={styles.detail}>
-							<span>Ветер:</span>
+							<span>Ветер</span>
 							<span>{weather.windSpeed} м/с</span>
 						</div>
 					</div>
@@ -129,14 +125,8 @@ export const WeatherWidget = () => {
 			</div>
 
 			{isModalOpen && (
-				<div
-					className={styles.modalOverlay}
-					onClick={() => setIsModalOpen(false)}
-				>
-					<div
-						className={styles.modal}
-						onClick={(e) => e.stopPropagation()}
-					>
+				<div className={styles.modalOverlay} onClick={() => setIsModalOpen(false)}>
+					<div className={styles.modal} onClick={e => e.stopPropagation()}>
 						<h3>Введите название города</h3>
 						<form onSubmit={handleSubmit}>
 							<input
@@ -148,10 +138,7 @@ export const WeatherWidget = () => {
 							/>
 							{error && <div className={styles.error}>{error}</div>}
 							<div className={styles.modalButtons}>
-								<button
-									type="submit"
-									className={styles.submitButton}
-								>
+								<button type="submit" className={styles.submitButton}>
 									Найти
 								</button>
 								<button

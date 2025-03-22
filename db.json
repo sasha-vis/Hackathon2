@@ -147,6 +147,80 @@
 					"url": "url"
 				}
 			]
+		},
+		{
+			"id": "3",
+			"name": "Андрей",
+			"surname": "Лазурко",
+			"age": 36,
+			"avatar": "/src/assets/andrey.jpg",
+			"about": "Заканчиваю свое обучение профессии frontend-разработчика в Result University, так же развиваюсь в области backend-разработки, изучаю паттерны проектирования и алгоритмы.",
+			"implementedFeature": "Разработал компоненты пользовательского интерфейса, создал компонент пользователя, создал виджет погоды и страницу NotFound.",
+			"role": "Разработчик",
+			"skills": [
+				{
+					"id": "1",
+					"name": "HTML",
+					"progress": 8
+				},
+				{
+					"id": "2",
+					"name": "CSS",
+					"progress": 9
+				},
+				{
+					"id": "3",
+					"name": "JavaScript",
+					"progress": 8
+				},
+				{
+					"id": "4",
+					"name": "React",
+					"progress": 9
+				},
+				{
+					"id": "5",
+					"name": "Redux",
+					"progress": 9
+				},
+				{
+					"id": "6",
+					"name": "Git",
+					"progress": 6
+				}
+			],
+			"contacts": [
+				{
+					"id": "1",
+					"name": "LinkedIn",
+					"url": "url"
+				},
+				{
+					"id": "2",
+					"name": "Instagram",
+					"url": "url"
+				},
+				{
+					"id": "3",
+					"name": "Telegram",
+					"url": "https://t.me/zovrasgis"
+				},
+				{
+					"id": "4",
+					"name": "GitHub",
+					"url": "https://github.com/rasgis"
+				},
+				{
+					"id": "5",
+					"name": "Почта",
+					"url": "rasgis@yandex.ru"
+				},
+				{
+					"id": "6",
+					"name": "Телефон",
+					"url": "url"
+				}
+			]
 		}
 	]
 }
