@@ -1,59 +1,54 @@
 .weatherWidget {
-	background: rgba(185, 255, 240, 0.9);
 	border-radius: 12px;
-	padding: 1rem;
+	padding: 0.8rem;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(10px);
-	min-width: 200px;
-	transition: transform 0.3s ease;
+	min-width: 180px;
+	transition: all 0.3s ease;
+	background: rgba(255, 255, 255, 0.9);
+
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
 }
 
-.weatherWidget:hover {
-	transform: translateY(-2px);
-}
-
-.location {
-	text-align: center;
-	margin-bottom: 1rem;
-}
-
-.location h2 {
-	margin: 0;
-	font-size: 1.5rem;
-	color: #333;
-}
-
-.weatherInfo {
+.weatherContent {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	gap: 0.5rem;
 }
 
+.mainInfo {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
 .iconContainer {
-	font-size: 3rem;
-	color: #333;
+	font-size: 2.5rem;
+}
+
+.temperatureInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
 }
 
 .temperature {
-	font-size: 2rem;
+	font-size: 1.8rem;
 	font-weight: bold;
-	color: #333;
 }
 
-.condition {
-	font-size: 1.2rem;
-	color: #666;
-	text-transform: capitalize;
+.city {
+	font-size: 1rem;
+	opacity: 0.9;
 }
 
 .details {
-	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	margin-top: 0.5rem;
 	padding-top: 0.5rem;
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .detail {
@@ -61,10 +56,114 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 0.2rem;
-	color: #666;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 }
 
+/* Стили для разных температур */
+.hot {
+	background: linear-gradient(135deg, rgba(255, 87, 34, 0.9), rgba(255, 152, 0, 0.9));
+	color: white;
+}
+
+.warm {
+	background: linear-gradient(135deg, rgba(255, 193, 7, 0.9), rgba(255, 235, 59, 0.9));
+}
+
+.cold {
+	background: linear-gradient(135deg, rgba(33, 150, 243, 0.9), rgba(64, 196, 255, 0.9));
+	color: white;
+}
+
+/* Стили для разных погодных условий */
+.sunny {
+	background: linear-gradient(135deg, rgba(255, 193, 7, 0.9), rgba(255, 235, 59, 0.9));
+}
+
+.cloudy {
+	background: linear-gradient(
+		135deg,
+		rgba(158, 158, 158, 0.9),
+		rgba(189, 189, 189, 0.9)
+	);
+	color: white;
+}
+
+.rainy {
+	background: linear-gradient(135deg, rgba(33, 150, 243, 0.9), rgba(64, 196, 255, 0.9));
+	color: white;
+}
+
+.snowy {
+	background: linear-gradient(
+		135deg,
+		rgba(236, 239, 241, 0.9),
+		rgba(207, 216, 220, 0.9)
+	);
+}
+
+.thunderstorm {
+	background: linear-gradient(135deg, rgba(33, 33, 33, 0.9), rgba(66, 66, 66, 0.9));
+	color: white;
+}
+
+/* Стили для текста в зависимости от фона */
+.hot h2,
+.hot .temperature,
+.hot .city,
+.hot .detail span {
+	color: white;
+}
+
+.warm h2,
+.warm .temperature,
+.warm .city,
+.warm .detail span {
+	color: #333;
+}
+
+.cold h2,
+.cold .temperature,
+.cold .city,
+.cold .detail span {
+	color: white;
+}
+
+.sunny h2,
+.sunny .temperature,
+.sunny .city,
+.sunny .detail span {
+	color: #333;
+}
+
+.cloudy h2,
+.cloudy .temperature,
+.cloudy .city,
+.cloudy .detail span {
+	color: white;
+}
+
+.rainy h2,
+.rainy .temperature,
+.rainy .city,
+.rainy .detail span {
+	color: white;
+}
+
+.snowy h2,
+.snowy .temperature,
+.snowy .city,
+.snowy .detail span {
+	color: #333;
+}
+
+.thunderstorm h2,
+.thunderstorm .temperature,
+.thunderstorm .city,
+.thunderstorm .detail span {
+	color: white;
+}
+
+/* Стили модального окна */
 .modalOverlay {
 	position: fixed;
 	top: 0;
@@ -80,26 +179,27 @@
 
 .modal {
 	background: white;
-	padding: 2rem;
+	padding: 1.5rem;
 	border-radius: 12px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	width: 90%;
-	max-width: 400px;
+	max-width: 300px;
 }
 
 .modal h3 {
 	margin: 0 0 1rem 0;
 	color: #333;
 	text-align: center;
+	font-size: 1.2rem;
 }
 
 .input {
 	width: 100%;
-	padding: 0.8rem;
+	padding: 0.6rem;
 	border: 1px solid #ddd;
 	border-radius: 6px;
-	font-size: 1rem;
-	margin-bottom: 1rem;
+	font-size: 0.9rem;
+	margin-bottom: 0.8rem;
 }
 
 .input:focus {
@@ -110,23 +210,23 @@
 
 .error {
 	color: #dc2626;
-	font-size: 0.9rem;
-	margin-bottom: 1rem;
+	font-size: 0.8rem;
+	margin-bottom: 0.8rem;
 	text-align: center;
 }
 
 .modalButtons {
 	display: flex;
-	gap: 1rem;
+	gap: 0.8rem;
 	justify-content: center;
 }
 
 .submitButton,
 .cancelButton {
-	padding: 0.8rem 1.5rem;
+	padding: 0.6rem 1.2rem;
 	border: none;
 	border-radius: 6px;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
@@ -151,32 +251,28 @@
 
 @media (max-width: 768px) {
 	.weatherWidget {
-		min-width: 150px;
-		padding: 0.8rem;
-	}
-
-	.location h2 {
-		font-size: 1.2rem;
+		min-width: 140px;
+		padding: 0.6rem;
 	}
 
 	.iconContainer {
-		font-size: 2.5rem;
+		font-size: 2rem;
 	}
 
 	.temperature {
 		font-size: 1.5rem;
 	}
 
-	.condition {
-		font-size: 1rem;
+	.city {
+		font-size: 0.9rem;
 	}
 
 	.detail {
-		font-size: 0.8rem;
+		font-size: 0.75rem;
 	}
 
 	.modal {
-		padding: 1.5rem;
+		padding: 1.2rem;
 		width: 95%;
 	}
 }

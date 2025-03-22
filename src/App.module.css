@@ -1,12 +1,16 @@
-.App {
+.app {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	background-color: #f9fafb;
+	background-color: #d1cdc9;
+	justify-content: space-between;
 }
 
-@media (max-width: 640px) {
-	.App {
-		font-size: 14px;
-	}
+.main {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0 50px;
 }

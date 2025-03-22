@@ -1,23 +1,17 @@
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { addToFavorites, removeFromFavorites } from '../../actions';
-import { selectFavorites } from '../../selectors';
+import { FavoriteButton, Button } from '../';
 import styles from './member-card.module.css';
-import { FavoriteButton } from '../favorite-button/FavotireButton';
 
-export const MemberCard = ({ id, name, surname, avatar, about }) => {
-	const favoritesMembers = useSelector(selectFavorites);
-	const dispatch = useDispatch();
-
-	const addMemberCardToFavorite = () => {
-		dispatch(addToFavorites(id));
-	};
-
-	const removeCardFromFavorites = () => {
-		dispatch(removeFromFavorites(id));
-	};
-
-	const isfavorite = favoritesMembers.includes(id);
+export const MemberCard = ({
+	id,
+	name,
+	surname,
+	avatar,
+	about,
+	isFavorite,
+	addMemberCardToFavorites,
+	removeCardFromFavorites,
+}) => {
 	return (
 		<div className={styles.card}>
 			<img
@@ -29,21 +23,18 @@ export const MemberCard = ({ id, name, surname, avatar, about }) => {
 			</h3>
 			<p>{about}</p>
 			<div className={styles.buttons}>
-				<Link
-					to={`/member/${id}`}
-					className={styles.detailed}
-				>
-					Подробнее...
-				</Link>
-				{isfavorite ? (
+				<Button>
+					<Link to={`/member/${id}`}>Подробнее...</Link>
+				</Button>
+				{isFavorite ? (
 					<FavoriteButton
 						color={'#3b82f6'}
-						onClick={removeCardFromFavorites}
+						onClick={() => removeCardFromFavorites(id)}
 					/>
 				) : (
 					<FavoriteButton
 						color={'#000'}
-						onClick={addMemberCardToFavorite}
+						onClick={() => addMemberCardToFavorites(id)}
 					/>
 				)}
 			</div>
