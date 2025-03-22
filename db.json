@@ -5,50 +5,72 @@
 			"name": "Александр",
 			"surname": "Высоцкий",
 			"age": 26,
-			"avatar": "",
-			"images": [
-				{ "id": "1", "url": "" },
-				{ "id": "2", "url": "" },
-				{ "id": "3", "url": "" }
-			],
+			"avatar": "sasha.jpg",
 			"about": "Я студент курса фронтенд разработки",
+			"implementedFeature": "Создание начального проекта",
+			"role": "Тимлид",
+			"skills": [
+				{
+					"id": "1",
+					"name": "HTML",
+					"progress": 9
+				},
+				{
+					"id": "2",
+					"name": "CSS",
+					"progress": 9
+				},
+				{
+					"id": "3",
+					"name": "JavaScript",
+					"progress": 8
+				},
+				{
+					"id": "4",
+					"name": "React",
+					"progress": 7
+				},
+				{
+					"id": "5",
+					"name": "Redux",
+					"progress": 6
+				},
+				{
+					"id": "6",
+					"name": "Git",
+					"progress": 8
+				}
+			],
 			"contacts": [
 				{
 					"id": "1",
 					"name": "LinkedIn",
-					"url": ""
+					"url": "url"
 				},
 				{
 					"id": "2",
 					"name": "Instagram",
-					"url": ""
+					"url": "url"
 				},
 				{
 					"id": "3",
 					"name": "Telegram",
-					"url": ""
+					"url": "url"
 				},
 				{
 					"id": "4",
 					"name": "GitHub",
-					"url": ""
+					"url": "url"
 				},
 				{
 					"id": "5",
 					"name": "Почта",
-					"url": ""
+					"url": "url"
 				},
 				{
 					"id": "6",
 					"name": "Телефон",
-					"url": ""
-				}
-			],
-			"what_i_do": [
-				{
-					"id": "1",
-					"title": "Создание начального проекта",
-					"description": ""
+					"url": "url"
 				}
 			]
 		}
