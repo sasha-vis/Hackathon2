@@ -8,10 +8,22 @@ export const App = () => {
 		<div className={styles.App}>
 			<Header />
 			<Routes>
-				<Route path="/" element={<MainPage></MainPage>} />
-				<Route path="/member/:id" element={<MemberPage></MemberPage>} />
-				<Route path="/favorites" element={<FavoritesPage></FavoritesPage>} />
-				<Route path="*" element={<NotFoundPage></NotFoundPage>} />
+				<Route
+					path="/"
+					element={<MainPage></MainPage>}
+				/>
+				<Route
+					path="/member/:id"
+					element={<MemberPage></MemberPage>}
+				/>
+				<Route
+					path="/favorites"
+					element={<FavoritesPage></FavoritesPage>}
+				/>
+				<Route
+					path="*"
+					element={<NotFoundPage></NotFoundPage>}
+				/>
 			</Routes>
 		</div>
 	);

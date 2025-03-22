@@ -22,7 +22,6 @@
 	transform: translateY(-2px);
 }
 
-/* Специфичные цвета для каждой соц сети при наведении */
 .socialIcon[title='GitHub']:hover {
 	color: #333;
 }
