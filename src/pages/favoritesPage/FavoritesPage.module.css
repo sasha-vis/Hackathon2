@@ -1,4 +1,19 @@
 .FavoritesPage {
-	height: 80%;
-	border: 2px solid red;
+	flex: 1;
+	padding: 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+@media (max-width: 1024px) {
+	.FavoritesPage {
+		padding: 1.5rem;
+	}
+}
+
+@media (max-width: 640px) {
+	.FavoritesPage {
+		padding: 1rem;
+	}
 }
