@@ -5,7 +5,7 @@
 			"name": "Александр",
 			"surname": "Высоцкий",
 			"age": 26,
-			"avatar": "sasha.jpg",
+			"avatar": "/src/assets/sasha.jpg",
 			"about": "Я студент курса фронтенд разработки",
 			"implementedFeature": "Создание начального проекта",
 			"role": "Тимлид",
@@ -66,6 +66,80 @@
 					"id": "5",
 					"name": "Почта",
 					"url": "url"
+				},
+				{
+					"id": "6",
+					"name": "Телефон",
+					"url": "url"
+				}
+			]
+		},
+		{
+			"id": "2",
+			"name": "Дарья",
+			"surname": "Провальская",
+			"age": 19,
+			"avatar": "/src/assets/daria.jpg",
+			"about": "Я учусь на frontend-разработчика в Result University и изучаю другие языки программирования в университете",
+			"implementedFeature": "Разаработала главную страницу проекта, карточку отдельного участника, компонент Progress, дизайн проекта.",
+			"role": "Разработчик",
+			"skills": [
+				{
+					"id": "1",
+					"name": "HTML",
+					"progress": 9
+				},
+				{
+					"id": "2",
+					"name": "CSS",
+					"progress": 9
+				},
+				{
+					"id": "3",
+					"name": "JavaScript",
+					"progress": 8
+				},
+				{
+					"id": "4",
+					"name": "React",
+					"progress": 8
+				},
+				{
+					"id": "5",
+					"name": "Redux",
+					"progress": 9.5
+				},
+				{
+					"id": "6",
+					"name": "Git",
+					"progress": 7
+				}
+			],
+			"contacts": [
+				{
+					"id": "1",
+					"name": "LinkedIn",
+					"url": "url"
+				},
+				{
+					"id": "2",
+					"name": "Instagram",
+					"url": "https://www.instagram.com/provalskaya_?igsh=N2x3b2h4NDI0MmU="
+				},
+				{
+					"id": "3",
+					"name": "Telegram",
+					"url": "https://t.me/kagsess"
+				},
+				{
+					"id": "4",
+					"name": "GitHub",
+					"url": "url"
+				},
+				{
+					"id": "5",
+					"name": "Почта",
+					"url": "kaamomee@gmail.com"
 				},
 				{
 					"id": "6",
