@@ -3,24 +3,24 @@ import { FaGithub, FaTelegram } from 'react-icons/fa';
 import { SlSocialVkontakte } from 'react-icons/sl';
 import styles from './MemberProfile.module.css';
 
-interface SocialLinks {
-	github?: string;
-	vk?: string;
-	telegram?: string;
-}
+// interface SocialLinks {
+// 	github?: string;
+// 	vk?: string;
+// 	telegram?: string;
+// }
 
-interface MemberProfileProps {
-	firstName: string;
-	lastName: string;
-	age: number;
-	about: string;
-	photo?: string;
-	defaultImage: string;
-	socialLinks: SocialLinks;
-	projectContribution: string;
-}
+// interface MemberProfileProps {
+// 	firstName: string;
+// 	lastName: string;
+// 	age: number;
+// 	about: string;
+// 	photo?: string;
+// 	defaultImage: string;
+// 	socialLinks: SocialLinks;
+// 	projectContribution: string;
+// }
 
-export const MemberProfile: React.FC<MemberProfileProps> = ({
+export const MemberProfile = ({
 	firstName,
 	lastName,
 	age,

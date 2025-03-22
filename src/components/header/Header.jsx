@@ -4,22 +4,31 @@ import styles from './Header.module.css';
 
 export const Header = () => {
 	return (
-		<div className={styles.Header}>
-			<nav className={styles.nav}>
-				<NavLink
-					to="/"
-					className={({ isActive }) => (isActive ? styles.active : '')}
-				>
-					Главная
-				</NavLink>
-				<NavLink
-					to="/favorites"
-					className={({ isActive }) => (isActive ? styles.active : '')}
-				>
-					Избранное
-				</NavLink>
-			</nav>
+		<header className={styles.header}>
+			<div className={styles.container}>
+				<div className={styles.logo}>
+					<h1>Hackathon2</h1>
+				</div>
+				<nav className={styles.nav}>
+					<NavLink
+						to="/"
+						className={({ isActive }) =>
+							isActive ? styles.active : styles.link
+						}
+					>
+						Главная
+					</NavLink>
+					<NavLink
+						to="/favorites"
+						className={({ isActive }) =>
+							isActive ? styles.active : styles.link
+						}
+					>
+						Избранное
+					</NavLink>
+				</nav>
+			</div>
 			<Breadcrumbs />
-		</div>
+		</header>
 	);
 };

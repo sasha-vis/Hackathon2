@@ -2,18 +2,28 @@ import React, { useEffect, useState } from 'react';
 import { WiDaySunny, WiCloudy, WiRain, WiSnow, WiThunderstorm } from 'react-icons/wi';
 import styles from './WeatherWidget.module.css';
 
-interface WeatherData {
-	temperature: number;
-	condition: string;
-	humidity: number;
-	windSpeed: number;
-	city: string;
-}
+// interface WeatherData {
+// 	temperature: number;
+// 	condition: string;
+// 	humidity: number;
+// 	windSpeed: number;
+// 	city: string;
+// }
 
 const STORAGE_KEY = 'weather_city';
 
-export const WeatherWidget: React.FC = () => {
-	const [weather, setWeather] = useState<WeatherData>({
+export const WeatherWidget = () => {
+	// const [weather, setWeather] =
+	// 	useState <
+	// 	WeatherData >
+	// 	{
+	// 		temperature: 0,
+	// 		condition: 'sunny',
+	// 		humidity: 0,
+	// 		windSpeed: 0,
+	// 		city: '',
+	// 	};
+	const [weather, setWeather] = useState({
 		temperature: 0,
 		condition: 'sunny',
 		humidity: 0,
@@ -25,7 +35,7 @@ export const WeatherWidget: React.FC = () => {
 	const [newCity, setNewCity] = useState('');
 	const [error, setError] = useState('');
 
-	const getWeatherIcon = (condition: string) => {
+	const getWeatherIcon = (condition) => {
 		const conditionLower = condition.toLowerCase();
 		if (conditionLower.includes('солн')) {
 			return <WiDaySunny className={styles.weatherIcon} />;
@@ -41,11 +51,11 @@ export const WeatherWidget: React.FC = () => {
 		return <WiDaySunny className={styles.weatherIcon} />;
 	};
 
-	const fetchWeather = (city: string) => {
+	const fetchWeather = (city) => {
 		setLoading(true);
 		setError('');
 		fetch(
-			`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=ru&appid=df89244c7d25e01ef07fc0f9f1715a8d`
+			`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=ru&appid=df89244c7d25e01ef07fc0f9f1715a8d`,
 		)
 			.then((response) => {
 				if (!response.ok) {
@@ -78,7 +88,7 @@ export const WeatherWidget: React.FC = () => {
 		fetchWeather(savedCity || 'Yessentuki');
 	}, []);
 
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (newCity.trim()) {
 			fetchWeather(newCity.trim());
@@ -119,8 +129,14 @@ export const WeatherWidget: React.FC = () => {
 			</div>
 
 			{isModalOpen && (
-				<div className={styles.modalOverlay} onClick={() => setIsModalOpen(false)}>
-					<div className={styles.modal} onClick={e => e.stopPropagation()}>
+				<div
+					className={styles.modalOverlay}
+					onClick={() => setIsModalOpen(false)}
+				>
+					<div
+						className={styles.modal}
+						onClick={(e) => e.stopPropagation()}
+					>
 						<h3>Введите название города</h3>
 						<form onSubmit={handleSubmit}>
 							<input
@@ -132,7 +148,10 @@ export const WeatherWidget: React.FC = () => {
 							/>
 							{error && <div className={styles.error}>{error}</div>}
 							<div className={styles.modalButtons}>
-								<button type="submit" className={styles.submitButton}>
+								<button
+									type="submit"
+									className={styles.submitButton}
+								>
 									Найти
 								</button>
 								<button

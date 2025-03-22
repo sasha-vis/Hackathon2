@@ -1,8 +1,8 @@
 import React from 'react';
-import { MemberProfile } from '../../components/memberProfile/MemberProfile';
+import { MemberProfile } from '../../components';
 import styles from './MemberPage.module.css';
 
-export const MemberPage: React.FC = () => {
+export const MemberPage = () => {
 	const memberData = {
 		firstName: 'Андрей',
 		lastName: 'Лазурко',
