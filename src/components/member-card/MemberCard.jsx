@@ -14,6 +14,10 @@ export const MemberCard = ({
 }) => {
 	return (
 		<div className={styles.card}>
+			<Badge
+				color={role === 'Тимлид' ? 'purple' : '#3b82f6'}
+				role={role}
+			/>
 			<img
 				src={avatar}
 				alt={`${name} ${surname}`}
