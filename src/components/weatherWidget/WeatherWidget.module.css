@@ -1,19 +1,39 @@
 .weatherWidgetContainer {
-	position: relative;
-	width: 100%;
-	max-width: 300px;
-	margin: 0 auto;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
 
 .toggleButton {
-	width: 100%;
-	padding: 8px;
-	margin-bottom: 10px;
-	background-color: #4a90e2;
-	color: white;
+	/* width: 150px; */
+	/* padding: 8px; */
+	background-color: transparent;
+	/* color: white; */
 	border: none;
-	border-radius: 4px;
+	border-radius: 50%;
 	cursor: pointer;
+	margin-top: 10px;
+
+	background: radial-gradient(
+		circle,
+		rgba(1, 105, 165, 0.7) 20%,
+		rgba(0, 255, 255, 0) 100%
+	);
+	border: 2px solid rgba(30, 120, 172, 0.7);
+	transition: 'box-shadow 0.3s ease';
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.toggleButton:hover {
+	border-color: rgba(47, 129, 177, 0.2);
+	box-shadow: 0 0 30px 10px rgba(47, 129, 177, 0.7);
 }
 
 .weatherWidget {
