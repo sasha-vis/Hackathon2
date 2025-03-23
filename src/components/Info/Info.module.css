@@ -12,3 +12,9 @@
 	font-size: 28px;
 	font-weight: 600;
 }
+
+@media (max-width: 700px) {
+	.info {
+		width: 100%;
+	}
+}
