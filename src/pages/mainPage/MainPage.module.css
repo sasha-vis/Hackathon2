@@ -1,0 +1,45 @@
+.MainPage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 20px;
+	flex: 1;
+	padding: 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 100%;
+	position: relative;
+}
+
+.members {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	gap: 30px;
+}
+
+.weatherContainer {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	z-index: 10;
+}
+
+@media (max-width: 1024px) {
+	.MainPage {
+		padding: 1.5rem;
+	}
+}
+
+@media (max-width: 640px) {
+	.MainPage {
+		padding: 1rem;
+	}
+
+	.weatherContainer {
+		bottom: 1rem;
+		right: 1rem;
+	}
+}

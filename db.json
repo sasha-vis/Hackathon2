@@ -1,0 +1,289 @@
+{
+	"members": [
+		{
+			"id": "1",
+			"name": "Александр",
+			"surname": "Высоцкий",
+			"age": 26,
+			"avatar": "/src/assets/sasha.jpg",
+			"about": "Начал заниматься фронтенд разработкой 4 года назад. Успел поработать как фулстек со стеком React/Redux и C#, .NET6, MS SQL. Делал социальную сеть на этих технологях. Далее работал с SAP SPQ, занимался разработкой бизнес процессов, конфигурации комерческих предложений и тд. Использовал Python и JavaScript. Сейчас хочу улучшить свои навыки и прохожу курс по фронтенд разработке.",
+			"implementedFeature": "Создание начального проекта, настройка маршрутов, реализация стора с Redux и начального файла db.json. Выстраивал процесс разработки проекта, менеджил все процессы. Реализовал страницу Избранное и делал прочие доработки по всем файлам.",
+			"roleId": "1",
+			"skills": [
+				{
+					"id": "1",
+					"name": "HTML",
+					"progress": 9
+				},
+				{
+					"id": "2",
+					"name": "CSS",
+					"progress": 9
+				},
+				{
+					"id": "3",
+					"name": "JavaScript",
+					"progress": 8
+				},
+				{
+					"id": "4",
+					"name": "React",
+					"progress": 7
+				},
+				{
+					"id": "5",
+					"name": "Redux",
+					"progress": 6
+				},
+				{
+					"id": "6",
+					"name": "Git",
+					"progress": 8
+				}
+			],
+			"contacts": [
+				{
+					"id": "6",
+					"url": "#"
+				},
+				{
+					"id": "5",
+					"url": "#"
+				},
+				{
+					"id": "3",
+					"url": "#"
+				},
+				{
+					"id": "4",
+					"url": "#"
+				},
+				{
+					"id": "1",
+					"url": "sasha.vysocki@gmail.com"
+				},
+				{
+					"id": "2",
+					"url": "#"
+				}
+			],
+			"works": [
+				{
+					"id": "1",
+					"title": "Работа 1",
+					"image": "/src/assets/11.jpg"
+				},
+				{
+					"id": "2",
+					"title": "Работа 2",
+					"image": "/src/assets/12.jpg"
+				},
+				{
+					"id": "3",
+					"title": "Работа 3",
+					"image": "/src/assets/13.jpg"
+				},
+				{
+					"id": "4",
+					"title": "Работа 4",
+					"image": "/src/assets/14.jpg"
+				},
+				{
+					"id": "5",
+					"title": "Работа 5",
+					"image": "/src/assets/15.jpg"
+				}
+			]
+		},
+		{
+			"id": "2",
+			"name": "Дарья",
+			"surname": "Провальская",
+			"age": 19,
+			"avatar": "/src/assets/daria.jpg",
+			"about": "Я учусь на frontend-разработчика в Result University и изучаю другие языки программирования в университете",
+			"implementedFeature": "Разаработала главную страницу проекта, карточку отдельного участника, компонент Progress, Badge, дизайн проекта, компонент хлебных крошек, loader и типизирование пропсов.",
+			"roleId": "2",
+			"skills": [
+				{
+					"id": "1",
+					"name": "HTML",
+					"progress": 9
+				},
+				{
+					"id": "2",
+					"name": "CSS",
+					"progress": 9
+				},
+				{
+					"id": "3",
+					"name": "JavaScript",
+					"progress": 8
+				},
+				{
+					"id": "4",
+					"name": "React",
+					"progress": 8
+				},
+				{
+					"id": "5",
+					"name": "Redux",
+					"progress": 9.5
+				},
+				{
+					"id": "6",
+					"name": "Git",
+					"progress": 7
+				}
+			],
+			"contacts": [
+				{
+					"id": "6",
+					"url": "#"
+				},
+				{
+					"id": "5",
+					"url": "https://www.instagram.com/provalskaya_?igsh=N2x3b2h4NDI0MmU="
+				},
+				{
+					"id": "3",
+					"url": "https://t.me/kagsess"
+				},
+				{
+					"id": "4",
+					"url": "#"
+				},
+				{
+					"id": "1",
+					"url": "kaamomee@gmail.com"
+				},
+				{
+					"id": "2",
+					"url": "#"
+				}
+			],
+			"works": [
+				{
+					"id": "1",
+					"title": "Работа 1",
+					"image": "/src/assets/21.jpg"
+				},
+				{
+					"id": "2",
+					"title": "Работа 2",
+					"image": "/src/assets/22.jpg"
+				},
+				{
+					"id": "3",
+					"title": "Работа 3",
+					"image": "/src/assets/23.jpg"
+				},
+				{
+					"id": "4",
+					"title": "Работа 4",
+					"image": "/src/assets/24.jpg"
+				},
+				{
+					"id": "5",
+					"title": "Работа 5",
+					"image": "/src/assets/25.jpg"
+				}
+			]
+		},
+		{
+			"id": "3",
+			"name": "Андрей",
+			"surname": "Лазурко",
+			"age": 36,
+			"avatar": "/src/assets/andrey.jpg",
+			"about": "Заканчиваю свое обучение профессии frontend-разработчика в Result University, так же развиваюсь в области backend-разработки, изучаю паттерны проектирования и алгоритмы.",
+			"implementedFeature": "Разработал компоненты пользовательского интерфейса, создал компонент пользователя, создал виджет погоды и страницу NotFound.",
+			"roleId": "2",
+			"skills": [
+				{
+					"id": "1",
+					"name": "HTML",
+					"progress": 8
+				},
+				{
+					"id": "2",
+					"name": "CSS",
+					"progress": 9
+				},
+				{
+					"id": "3",
+					"name": "JavaScript",
+					"progress": 8
+				},
+				{
+					"id": "4",
+					"name": "React",
+					"progress": 9
+				},
+				{
+					"id": "5",
+					"name": "Redux",
+					"progress": 9
+				},
+				{
+					"id": "6",
+					"name": "Git",
+					"progress": 6
+				}
+			],
+			"contacts": [
+				{
+					"id": "6",
+					"url": "#"
+				},
+				{
+					"id": "5",
+					"url": "#"
+				},
+				{
+					"id": "3",
+					"url": "https://t.me/zovrasgis"
+				},
+				{
+					"id": "4",
+					"url": "https://github.com/rasgis"
+				},
+				{
+					"id": "1",
+					"url": "rasgis@yandex.ru"
+				},
+				{
+					"id": "2",
+					"url": "#"
+				}
+			],
+			"works": [
+				{
+					"id": "1",
+					"title": "Работа 1",
+					"image": "/src/assets/31.jpg"
+				},
+				{
+					"id": "2",
+					"title": "Работа 2",
+					"image": "/src/assets/32.jpg"
+				},
+				{
+					"id": "3",
+					"title": "Работа 3",
+					"image": "/src/assets/33.jpg"
+				},
+				{
+					"id": "4",
+					"title": "Работа 4",
+					"image": "/src/assets/34.jpg"
+				},
+				{
+					"id": "5",
+					"title": "Работа 5",
+					"image": "/src/assets/35.jpg"
+				}
+			]
+		}
+	]
+}
