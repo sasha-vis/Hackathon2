@@ -72,6 +72,33 @@
 					"name": "Телефон",
 					"url": "url"
 				}
+			],
+			"works": [
+				{
+					"id": "1",
+					"title": "Работа 1",
+					"image": "/src/assets/11.jpg"
+				},
+				{
+					"id": "2",
+					"title": "Работа 2",
+					"image": "/src/assets/12.jpg"
+				},
+				{
+					"id": "3",
+					"title": "Работа 3",
+					"image": "/src/assets/13.jpg"
+				},
+				{
+					"id": "4",
+					"title": "Работа 4",
+					"image": "/src/assets/14.jpg"
+				},
+				{
+					"id": "5",
+					"title": "Работа 5",
+					"image": "/src/assets/15.jpg"
+				}
 			]
 		},
 		{
@@ -146,6 +173,33 @@
 					"name": "Телефон",
 					"url": "url"
 				}
+			],
+			"works": [
+				{
+					"id": "1",
+					"title": "Работа 1",
+					"image": "/src/assets/21.jpg"
+				},
+				{
+					"id": "2",
+					"title": "Работа 2",
+					"image": "/src/assets/22.jpg"
+				},
+				{
+					"id": "3",
+					"title": "Работа 3",
+					"image": "/src/assets/23.jpg"
+				},
+				{
+					"id": "4",
+					"title": "Работа 4",
+					"image": "/src/assets/24.jpg"
+				},
+				{
+					"id": "5",
+					"title": "Работа 5",
+					"image": "/src/assets/25.jpg"
+				}
 			]
 		},
 		{
@@ -219,6 +273,33 @@
 					"id": "6",
 					"name": "Телефон",
 					"url": "url"
+				}
+			],
+			"works": [
+				{
+					"id": "1",
+					"title": "Работа 1",
+					"image": "/src/assets/31.jpg"
+				},
+				{
+					"id": "2",
+					"title": "Работа 2",
+					"image": "/src/assets/32.jpg"
+				},
+				{
+					"id": "3",
+					"title": "Работа 3",
+					"image": "/src/assets/33.jpg"
+				},
+				{
+					"id": "4",
+					"title": "Работа 4",
+					"image": "/src/assets/34.jpg"
+				},
+				{
+					"id": "5",
+					"title": "Работа 5",
+					"image": "/src/assets/35.jpg"
 				}
 			]
 		}

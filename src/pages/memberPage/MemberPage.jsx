@@ -3,7 +3,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { selectMembers, selectFavorites } from '../../selectors';
-import { Progress, Badge, FavoriteButton } from '../../components';
+import { Progress, Badge, FavoriteButton, WorksSlider } from '../../components';
 import { addToFavorites, removeFromFavorites } from '../../actions';
 import styles from './MemberPage.module.css';
 
@@ -89,6 +89,10 @@ export const MemberPage = () => {
 							/>
 						))}
 					</div>
+				</div>
+				<div className={styles.section}>
+					<h3>Мои работы:</h3>
+					<WorksSlider works={member.works} />
 				</div>
 			</div>
 		</div>
