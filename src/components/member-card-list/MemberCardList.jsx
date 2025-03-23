@@ -1,20 +1,13 @@
 import { MemberCard } from '../';
 import { selectFavorites } from '../../selectors';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToFavorites, removeFromFavorites } from '../../actions';
+import { addMemberCardToFavorites, removeMemberCardFromFavorites } from '../../utils';
 import styles from './MemberCardList.module.css';
+import PropTypes from 'prop-types';
 
 export const MemberCardList = ({ members }) => {
 	const favorites = useSelector(selectFavorites);
 	const dispatch = useDispatch();
-
-	const addMemberCardToFavorites = (id) => {
-		dispatch(addToFavorites(id));
-	};
-
-	const removeCardFromFavorites = (id) => {
-		dispatch(removeFromFavorites(id));
-	};
 
 	return (
 		<div className={styles.cardList}>
@@ -23,10 +16,15 @@ export const MemberCardList = ({ members }) => {
 					key={member.id}
 					{...member}
 					isFavorite={favorites.includes(member.id)}
-					addMemberCardToFavorites={() => addMemberCardToFavorites(member.id)}
-					removeCardFromFavorites={() => removeCardFromFavorites(member.id)}
+					dispatch={dispatch}
+					addMemberCardToFavorites={addMemberCardToFavorites}
+					removeMemberCardFromFavorites={removeMemberCardFromFavorites}
 				/>
 			))}
 		</div>
 	);
+};
+
+MemberCardList.propTypes = {
+	member: PropTypes.array.isRequired,
 };
