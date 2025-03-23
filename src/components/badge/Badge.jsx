@@ -1,12 +1,9 @@
+import { ROLES } from './constans';
 import styles from './badge.module.css';
-
-const roles = [
-	{ id: '1', name: 'Тимлид', color: 'gold' },
-	{ id: '2', name: 'Разработчик', color: 'blue' },
-];
+import PropTypes from 'prop-types';
 
 export const Badge = ({ roleId }) => {
-	const role = roles.find((role) => role.id === roleId);
+	const role = ROLES.find((role) => role.id === roleId);
 
 	if (!role) return null;
 
@@ -18,4 +15,8 @@ export const Badge = ({ roleId }) => {
 			{role.name}
 		</div>
 	);
+};
+
+Badge.propTypes = {
+	roleId: PropTypes.string.isRequired,
 };
