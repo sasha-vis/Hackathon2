@@ -1,11 +1,74 @@
-// import { FaGithub, FaTelegram } from 'react-icons/fa';
-// import { SlSocialVkontakte } from 'react-icons/sl';
+import { FaGithub, FaTelegram, FaPhone, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { IoMdMail } from 'react-icons/io';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { selectMembers, selectFavorites } from '../../selectors';
 import { Progress, Badge, FavoriteButton, WorksSlider } from '../../components';
 import { addToFavorites, removeFromFavorites } from '../../actions';
 import styles from './MemberPage.module.css';
+
+const contacts = [
+	{ id: '1', name: 'Почта' },
+	{ id: '2', name: 'Телефон' },
+	{ id: '3', name: 'Телеграм' },
+	{ id: '4', name: 'Гитхаб' },
+	{ id: '5', name: 'Инстаграм' },
+	{ id: '6', name: 'Линкдин' },
+];
+
+const getContactElement = ({ id, url }) => {
+	const contact = contacts.find((c) => c.id === id);
+	if (!contact) return null;
+
+	let Icon;
+	switch (contact.id) {
+		case '1':
+			Icon = IoMdMail;
+			return (
+				<a
+					href={`mailto:${url}`}
+					aria-label="Email"
+				>
+					<Icon />
+				</a>
+			);
+		case '2':
+			Icon = FaPhone;
+			return (
+				<a
+					href={`tel:${url}`}
+					aria-label="Phone"
+				>
+					<Icon />
+				</a>
+			);
+		case '3':
+			Icon = FaTelegram;
+			break;
+		case '4':
+			Icon = FaGithub;
+			break;
+		case '5':
+			Icon = FaInstagram;
+			break;
+		case '6':
+			Icon = FaLinkedin;
+			break;
+		default:
+			return null;
+	}
+
+	return (
+		<a
+			href={url}
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label={contact.name}
+		>
+			<Icon />
+		</a>
+	);
+};
 
 export const MemberPage = () => {
 	const dispatch = useDispatch();
@@ -67,14 +130,16 @@ export const MemberPage = () => {
 				<div className={styles.section}>
 					<h3>Социальные сети:</h3>
 					<div>
-						{member.contacts.map((contact) => (
-							<a
-								key={contact.id}
-								href={contact.url}
-							>
-								{contact.name}
-							</a>
-						))}
+						{member.contacts.map((contact) =>
+							!contact.url || contact.url === '#' ? null : (
+								<span
+									key={contact.id}
+									className={styles.icon}
+								>
+									{getContactElement(contact)}
+								</span>
+							),
+						)}
 					</div>
 				</div>
 
