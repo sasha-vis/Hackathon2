@@ -75,3 +75,83 @@
 .section a:hover {
 	transform: scale(1.05);
 }
+
+.icon {
+	display: inline-flex;
+	margin: 0 10px;
+}
+
+.icon a {
+	color: #333;
+	font-size: 24px;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.05);
+	position: relative;
+	overflow: hidden;
+}
+
+.icon a::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(45deg, #3b82f6, #60a5fa);
+	opacity: 0;
+	transform: scale(0);
+	transition: all 0.3s ease;
+	border-radius: 50%;
+	z-index: 0;
+}
+
+.icon a svg {
+	position: relative;
+	z-index: 1;
+	transition: all 0.3s ease;
+}
+
+.icon a:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
+}
+
+.icon a:hover::before {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.icon a:hover svg {
+	color: white;
+	transform: scale(1.1);
+}
+
+.icon a[aria-label='Email']:hover::before {
+	background: linear-gradient(45deg, #ea4335, #ff6b6b);
+}
+
+.icon a[aria-label='Phone']:hover::before {
+	background: linear-gradient(45deg, #34d399, #10b981);
+}
+
+.icon a[aria-label='Телеграм']:hover::before {
+	background: linear-gradient(45deg, #0088cc, #00b2ff);
+}
+
+.icon a[aria-label='Гитхаб']:hover::before {
+	background: linear-gradient(45deg, #333333, #666666);
+}
+
+.icon a[aria-label='Инстаграм']:hover::before {
+	background: linear-gradient(45deg, #e1306c, #f77737);
+}
+
+.icon a[aria-label='Линкдин']:hover::before {
+	background: linear-gradient(45deg, #0077b5, #00a0dc);
+}

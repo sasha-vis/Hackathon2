@@ -20,9 +20,31 @@
 
 .progress {
 	height: 100%;
-	background-color: #e8ff59;
 	border-radius: 20px;
 	display: flex;
 	justify-content: center;
 	color: #000;
+	transition: all 0.3s ease;
+}
+
+.beginner {
+	background: linear-gradient(90deg, #fc696e 0%, #ffa7f0 100%);
+}
+
+.intermediate {
+	background: linear-gradient(90deg, #ffa7f0 0%, #e8ff59 100%);
+}
+
+.advanced {
+	background: linear-gradient(90deg, #e8ff59 0%, #43e9c0 100%);
+}
+
+.expert {
+	background: linear-gradient(90deg, #43e9c0 0%, #38f942 100%);
+}
+
+.progress:hover {
+	filter: brightness(1.1);
+	transform: scale(1.05);
+
 }
