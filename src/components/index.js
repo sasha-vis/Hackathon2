@@ -8,3 +8,4 @@ export * from './favorite-button/FavoriteButton';
 export * from './bread-crumbs/Breadcrumbs';
 export * from './progress/Progress';
 export * from './badge/Badge';
+export * from './workSlider/WorkSlider';
