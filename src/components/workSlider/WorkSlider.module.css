@@ -1,6 +1,7 @@
 .sliderWrapper {
 	width: 100%;
 	display: flex;
+	flex-wrap: nowrap !important;
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
@@ -22,7 +23,7 @@
 
 .slide {
 	flex: 1;
-	height: 450px;
+	height: 200px;
 	border-radius: 20px;
 	background-size: cover;
 	background-position: center;
@@ -85,9 +86,8 @@
 
 .arrowLeft,
 .arrowRight {
-	background: rgba(255, 255, 255, 0.2);
-	backdrop-filter: blur(5px);
-	color: white;
+	background-color: transparent;
+	color: #111;
 	border: none;
 	width: 50px;
 	height: 50px;
@@ -97,15 +97,12 @@
 	align-items: center;
 	justify-content: center;
 	font-size: 24px;
-	transition: all 0.3s ease;
-	z-index: 3;
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	font-weight: bold;
 }
 
 .arrowLeft:hover,
 .arrowRight:hover {
-	background: rgba(255, 255, 255, 0.3);
-	transform: scale(1.1);
+	transform: scale(1.2);
 }
 
 /* Добавляем эффект свечения при наведении на активный слайд */
@@ -133,7 +130,6 @@
 
 	.slide {
 		min-width: calc(100% - 20px);
-		height: 300px;
 	}
 
 	.arrowLeft,

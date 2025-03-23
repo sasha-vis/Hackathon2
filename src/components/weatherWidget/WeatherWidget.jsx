@@ -74,7 +74,7 @@ export const WeatherWidget = () => {
 		}
 	};
 
-	if (loading) return <div className={styles.weatherWidget}>Загрузка...</div>;
+	if (loading) return null;
 
 	return (
 		<div className={styles.weatherWidgetContainer}>

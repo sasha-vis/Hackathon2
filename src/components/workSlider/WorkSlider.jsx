@@ -34,7 +34,7 @@ export const WorksSlider = ({ works }) => {
 				className={styles.arrowLeft}
 				onClick={prevSlide}
 			>
-				&#8592;
+				{'<'}
 			</button>
 
 			<div className={styles.container}>
@@ -60,7 +60,7 @@ export const WorksSlider = ({ works }) => {
 				className={styles.arrowRight}
 				onClick={nextSlide}
 			>
-				&#8594;
+				{'>'}
 			</button>
 		</div>
 	);
