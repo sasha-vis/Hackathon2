@@ -1,6 +1,7 @@
 import { CONTACTS } from '../constans';
 import { FaGithub, FaTelegram, FaPhone, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
+import PropTypes from 'prop-types';
 
 export const getContactElement = ({ id, url }) => {
 	const contact = CONTACTS.find((c) => c.id === id);
@@ -54,4 +55,9 @@ export const getContactElement = ({ id, url }) => {
 			<Icon />
 		</a>
 	);
+};
+
+getContactElement.propTypes = {
+	id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+	url: PropTypes.string.isRequired,
 };

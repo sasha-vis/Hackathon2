@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { FavoriteButton, Button } from '../';
-import styles from './member-card.module.css';
 import PropTypes from 'prop-types';
+import styles from './member-card.module.css';
 
 export const MemberCard = ({
 	id,
@@ -10,10 +11,11 @@ export const MemberCard = ({
 	avatar,
 	about,
 	isFavorite,
-	dispatch,
 	addMemberCardToFavorites,
 	removeMemberCardFromFavorites,
 }) => {
+	const dispatch = useDispatch();
+
 	return (
 		<div className={styles.card}>
 			<img
@@ -51,7 +53,6 @@ MemberCard.propTypes = {
 	avatar: PropTypes.string.isRequired,
 	about: PropTypes.string.isRequired,
 	isFavorite: PropTypes.bool.isRequired,
-	dispatch: PropTypes.func.isRequired,
 	addMemberCardToFavorites: PropTypes.func.isRequired,
 	removeMemberCardFromFavorites: PropTypes.func.isRequired,
 };

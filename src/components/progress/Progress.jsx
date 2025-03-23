@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './Progress.module.css';
 
 export const Progress = ({ name, progress }) => {
@@ -14,4 +15,9 @@ export const Progress = ({ name, progress }) => {
 			</div>
 		</div>
 	);
+};
+
+Progress.propTypes = {
+	name: PropTypes.string.isRequired,
+	progress: PropTypes.number.isRequired,
 };

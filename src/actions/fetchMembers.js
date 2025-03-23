@@ -1,6 +1,6 @@
 import { ACTION_TYPE } from './action-type';
 import { START_LOADING } from './start-loading';
-import { END_LOADING } from './end-loading'
+import { END_LOADING } from './end-loading';
 
 export const fetchMembers = () => async (dispatch) => {
 	dispatch(START_LOADING);
@@ -10,7 +10,7 @@ export const fetchMembers = () => async (dispatch) => {
 
 		dispatch({ type: ACTION_TYPE.GET_MEMBERS, payload: data.members });
 	} catch (error) {
-		console.log('Error');
+		console.log('Error: Failed to fetch members');
 	}
 	dispatch(END_LOADING);
 };

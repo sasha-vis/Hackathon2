@@ -2,11 +2,10 @@ import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMembers } from './actions';
-import { MainPage, MemberPage, FavoritesPage, NotFoundPage } from './pages';
-import { Header, WeatherWidget } from './components';
-import styles from './App.module.css';
 import { selectLoader } from './selectors';
-import Loader from './components/loader/Loader';
+import { MainPage, MemberPage, FavoritesPage, NotFoundPage } from './pages';
+import { Header, WeatherWidget, Loader } from './components';
+import styles from './App.module.css';
 
 export const App = () => {
 	const dispatch = useDispatch();
