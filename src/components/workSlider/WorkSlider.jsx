@@ -2,26 +2,34 @@ import { useState } from 'react';
 import styles from './WorkSlider.module.css';
 
 export const WorksSlider = ({ works }) => {
-	const [currentIndex, setCurrentIndex] = useState(0);
-
-	const nextSlide = () => {
-		setCurrentIndex((prevIndex) =>
-			prevIndex === works.length - 1 ? 0 : prevIndex + 1,
-		);
-	};
-
-	const prevSlide = () => {
-		setCurrentIndex((prevIndex) =>
-			prevIndex === 0 ? works.length - 1 : prevIndex - 1,
-		);
-	};
+	const [startIndex, setStartIndex] = useState(0);
 
 	if (!works || works.length === 0) {
 		return <div>Нет доступных работ</div>;
 	}
 
+	const nextSlide = () => {
+		setStartIndex((prevIndex) => (prevIndex + 1 >= works.length ? 0 : prevIndex + 1));
+	};
+
+	const prevSlide = () => {
+		setStartIndex((prevIndex) =>
+			prevIndex === 0 ? works.length - 1 : prevIndex - 1,
+		);
+	};
+
+	const getCircularIndex = (index) => {
+		return ((index % works.length) + works.length) % works.length;
+	};
+
+	const visibleWorks = [
+		works[getCircularIndex(startIndex - 1)],
+		works[startIndex],
+		works[getCircularIndex(startIndex + 1)],
+	];
+
 	return (
-		<div className={styles.slider}>
+		<div className={styles.sliderWrapper}>
 			<button
 				className={styles.arrowLeft}
 				onClick={prevSlide}
@@ -29,13 +37,23 @@ export const WorksSlider = ({ works }) => {
 				&#8592;
 			</button>
 
-			<div className={styles.slideContainer}>
-				<img
-					src={works[currentIndex].image}
-					alt={works[currentIndex].title}
-					className={styles.slide}
-				/>
-				<p className={styles.title}>{works[currentIndex].title}</p>
+			<div className={styles.container}>
+				{visibleWorks.map((work, index) => (
+					<div
+						key={`${work.id}-${index}`}
+						className={`${styles.slide} ${index === 1 ? styles.active : ''}`}
+						onClick={() => {
+							if (index === 0) prevSlide();
+							if (index === 2) nextSlide();
+						}}
+						style={{
+							backgroundImage: `url(${work.image})`,
+						}}
+					>
+						<div className={styles.overlay} />
+						<h3>{work.title}</h3>
+					</div>
+				))}
 			</div>
 
 			<button
@@ -44,16 +62,6 @@ export const WorksSlider = ({ works }) => {
 			>
 				&#8594;
 			</button>
-
-			<div className={styles.dots}>
-				{works.map((_, index) => (
-					<span
-						key={index}
-						className={`${styles.dot} ${index === currentIndex ? styles.activeDot : ''}`}
-						onClick={() => setCurrentIndex(index)}
-					/>
-				))}
-			</div>
 		</div>
 	);
 };
