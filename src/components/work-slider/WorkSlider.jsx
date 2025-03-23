@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import styles from './WorkSlider.module.css';
 
@@ -64,4 +65,14 @@ export const WorksSlider = ({ works }) => {
 			</button>
 		</div>
 	);
+};
+
+WorksSlider.propTypes = {
+	works: PropTypes.arrayOf(
+		PropTypes.shape({
+			id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+			title: PropTypes.string.isRequired,
+			image: PropTypes.string.isRequired,
+		}),
+	).isRequired,
 };

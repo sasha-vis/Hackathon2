@@ -1,6 +1,6 @@
 import styles from './loader.module.css';
 
-const Loader = () => {
+export const Loader = () => {
 	return (
 		<div className={styles.loaderContainer}>
 			<div className={styles.spinner}></div>
@@ -8,5 +8,3 @@ const Loader = () => {
 		</div>
 	);
 };
-
-export default Loader;

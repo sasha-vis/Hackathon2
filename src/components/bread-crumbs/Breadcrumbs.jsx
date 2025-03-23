@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
-import styles from './Breadcrumbs.module.css';
 import { useSelector } from 'react-redux';
 import { selectMembers } from '../../selectors';
+import styles from './Breadcrumbs.module.css';
 
 export const Breadcrumbs = () => {
 	const location = useLocation();

@@ -1,6 +1,6 @@
 import { ROLES } from './constans';
-import styles from './badge.module.css';
 import PropTypes from 'prop-types';
+import styles from './badge.module.css';
 
 export const Badge = ({ roleId }) => {
 	const role = ROLES.find((role) => role.id === roleId);

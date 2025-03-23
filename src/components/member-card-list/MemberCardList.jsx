@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 
 export const MemberCardList = ({ members }) => {
 	const favorites = useSelector(selectFavorites);
-	const dispatch = useDispatch();
 
 	return (
 		<div className={styles.cardList}>
@@ -16,7 +15,6 @@ export const MemberCardList = ({ members }) => {
 					key={member.id}
 					{...member}
 					isFavorite={favorites.includes(member.id)}
-					dispatch={dispatch}
 					addMemberCardToFavorites={addMemberCardToFavorites}
 					removeMemberCardFromFavorites={removeMemberCardFromFavorites}
 				/>

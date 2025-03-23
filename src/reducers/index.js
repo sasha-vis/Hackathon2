@@ -1,3 +1,3 @@
 export * from './membersReducer';
 export * from './favoritesReducer';
-export * from './loaderReducer'
+export * from './loaderReducer';
