@@ -5,7 +5,7 @@
 			"name": "Александр",
 			"surname": "Высоцкий",
 			"age": 26,
-			"avatar": "/images/sasha.jpg",
+			"avatar": "/Hackathon2/images/sasha.jpg",
 			"about": "Начал заниматься фронтенд разработкой 4 года назад. Успел поработать как фулстек со стеком React/Redux и C#, .NET6, MS SQL. Делал социальную сеть на этих технологях. Далее работал с SAP SPQ, занимался разработкой бизнес процессов, конфигурации комерческих предложений и тд. Использовал Python и JavaScript. Сейчас хочу улучшить свои навыки и прохожу курс по фронтенд разработке.",
 			"implementedFeature": "Создание начального проекта, настройка маршрутов, реализация стора с Redux и начального файла db.json. Выстраивал процесс разработки проекта, менеджил все процессы. Реализовал страницу Избранное и делал прочие доработки по всем файлам.",
 			"roleId": "1",
@@ -71,27 +71,27 @@
 				{
 					"id": "1",
 					"title": "Работа 1",
-					"image": "/images/11.jpg"
+					"image": "/Hackathon2/images/11.jpg"
 				},
 				{
 					"id": "2",
 					"title": "Работа 2",
-					"image": "/images/12.jpg"
+					"image": "/Hackathon2/images/12.jpg"
 				},
 				{
 					"id": "3",
 					"title": "Работа 3",
-					"image": "/images/13.jpg"
+					"image": "/Hackathon2/images/13.jpg"
 				},
 				{
 					"id": "4",
 					"title": "Работа 4",
-					"image": "/images/14.jpg"
+					"image": "/Hackathon2/images/14.jpg"
 				},
 				{
 					"id": "5",
 					"title": "Работа 5",
-					"image": "/images/15.jpg"
+					"image": "/Hackathon2/images/15.jpg"
 				}
 			]
 		},
@@ -100,7 +100,7 @@
 			"name": "Дарья",
 			"surname": "Провальская",
 			"age": 19,
-			"avatar": "/images/daria.jpg",
+			"avatar": "/Hackathon2/images/daria.jpg",
 			"about": "Я учусь на frontend-разработчика в Result University и изучаю другие языки программирования в университете",
 			"implementedFeature": "Разаработала главную страницу проекта, карточку отдельного участника, компонент Progress, Badge, дизайн проекта, компонент хлебных крошек, loader и типизирование пропсов.",
 			"roleId": "2",
@@ -166,27 +166,27 @@
 				{
 					"id": "1",
 					"title": "Работа 1",
-					"image": "/images/21.jpg"
+					"image": "/Hackathon2/images/21.jpg"
 				},
 				{
 					"id": "2",
 					"title": "Работа 2",
-					"image": "/images/22.jpg"
+					"image": "/Hackathon2/images/22.jpg"
 				},
 				{
 					"id": "3",
 					"title": "Работа 3",
-					"image": "/images/23.jpg"
+					"image": "/Hackathon2/images/23.jpg"
 				},
 				{
 					"id": "4",
 					"title": "Работа 4",
-					"image": "/images/24.jpg"
+					"image": "/Hackathon2/images/24.jpg"
 				},
 				{
 					"id": "5",
 					"title": "Работа 5",
-					"image": "/images/25.jpg"
+					"image": "/Hackathon2/images/25.jpg"
 				}
 			]
 		},
@@ -195,7 +195,7 @@
 			"name": "Андрей",
 			"surname": "Лазурко",
 			"age": 36,
-			"avatar": "/images/andrey.jpg",
+			"avatar": "/Hackathon2/images/andrey.jpg",
 			"about": "Заканчиваю свое обучение профессии frontend-разработчика в Result University, так же развиваюсь в области backend-разработки, изучаю паттерны проектирования и алгоритмы.",
 			"implementedFeature": "Разработал компоненты пользовательского интерфейса, создал компонент пользователя, создал виджет погоды и страницу NotFound.",
 			"roleId": "2",
@@ -261,27 +261,27 @@
 				{
 					"id": "1",
 					"title": "Работа 1",
-					"image": "/images/31.jpg"
+					"image": "/Hackathon2/images/31.jpg"
 				},
 				{
 					"id": "2",
 					"title": "Работа 2",
-					"image": "/images/32.jpg"
+					"image": "/Hackathon2/images/32.jpg"
 				},
 				{
 					"id": "3",
 					"title": "Работа 3",
-					"image": "/images/33.jpg"
+					"image": "/Hackathon2/images/33.jpg"
 				},
 				{
 					"id": "4",
 					"title": "Работа 4",
-					"image": "/images/34.jpg"
+					"image": "/Hackathon2/images/34.jpg"
 				},
 				{
 					"id": "5",
 					"title": "Работа 5",
-					"image": "/images/35.jpg"
+					"image": "/Hackathon2/images/35.jpg"
 				}
 			]
 		}
